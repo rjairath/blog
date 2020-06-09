@@ -1,8 +1,12 @@
-@import '../../../assets/scss/variables';
-@import '../../../assets/scss/mixins';
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
 
 .contacts {
-  @include margin-bottom(1);
+  // @include margin-bottom(1);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   &__list {
     display: flex;
@@ -12,7 +16,8 @@
     list-style: none;
     padding: 0;
     margin: 10px -3px;
-    width: 140px;
+    margin-left: 2em;
+    // width: 100%;
 
     &-item {
       padding: 0;
@@ -32,16 +37,20 @@
         border: 0;
         display: flex;
         color: $color-base;
-  
+
         &:hover,
         &:focus {
           color: $color-primary;
         }
-
       }
-
     }
-
   }
+}
 
+.gatsby-logo {
+  width: 1em;
+  height: 1em;
+  display: inline-block;
+  top: 0.1em;
+  position: relative;
 }
