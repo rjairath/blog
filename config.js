@@ -27,7 +27,7 @@ module.exports = {
   author: {
     name: "Rishabh Jairath",
     photo: "/photo.jpg",
-    bio: `Engineer | Developer. Expertise lies in frontend technologies including HTML, CSS and Javascript.`,
+    bio: `Engineer | Developer. Passionate about all things Javascript and Python.`,
     contacts: {
       email: "",
       facebook: "",

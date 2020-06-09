@@ -28,13 +28,13 @@ const Contacts = ({ contacts }: Props) => (
         )
       )}
     </ul>
-    <span>
+    {/* <span>
       Powered by{" "}
       <img
         className={styles["gatsby-logo"]}
         src="/media/Gatsby-Monogram.svg"
       ></img>
-    </span>
+    </span> */}
   </div>
 );
 
