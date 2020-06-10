@@ -25,7 +25,13 @@ const Post = ({ post }: Props) => {
     <div className={styles["post"]}>
       <Header />
       <div className={styles["post__content"]}>
-        <Content body={html} title={title} date={date} />
+        <Content
+          body={html}
+          title={title}
+          date={date}
+          tags={tags}
+          tagSlugs={tagSlugs}
+        />
       </div>
 
       {/* <div className={styles['post__footer']}>

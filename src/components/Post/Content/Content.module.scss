@@ -6,6 +6,15 @@
   padding: 0 15px;
   margin: 0 auto;
 
+  &__meta {
+    display: flex;
+    justify-content: space-between;
+    max-width: 40rem;
+    margin-right: auto;
+    margin-left: auto;
+    border-bottom: 2px solid $color-gray-border;
+  }
+
   &__title {
     font-size: $typographic-base-font-size * 2;
     max-width: $layout-post-width;
