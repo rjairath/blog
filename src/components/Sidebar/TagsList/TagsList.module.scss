@@ -1,3 +1,5 @@
+@import "../../../assets/scss/variables";
+
 .tags {
   &__list {
     list-style: none;
@@ -7,7 +9,7 @@
   &__item {
     display: inline-block;
     float: none;
-    border: solid 1px #000;
+    border: solid 1px $color-gray-border;
     border-radius: 3px;
     margin-right: 0.5em;
   }
