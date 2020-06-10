@@ -1,0 +1,16 @@
+@import "../../../assets/scss/variables";
+
+.tags {
+  &__list {
+    list-style: none;
+    padding-left: 0;
+  }
+
+  &__item {
+    display: inline-block;
+    float: none;
+    border: solid 1px $color-gray-border;
+    border-radius: 3px;
+    margin-right: 0.5em;
+  }
+}

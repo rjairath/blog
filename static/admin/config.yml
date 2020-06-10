@@ -1,3 +1,5 @@
+# config file for the cms admin page
+
 backend:
   name: git-gateway
   repo: rjairath/blog

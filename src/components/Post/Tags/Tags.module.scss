@@ -1,8 +1,8 @@
-@import '../../../assets/scss/variables';
-@import '../../../assets/scss/mixins';
+@import "../../../assets/scss/variables";
+@import "../../../assets/scss/mixins";
 
 .tags {
-  @include margin-bottom(.5);
+  @include margin-bottom(0.5);
 
   &__list {
     list-style: none;
@@ -12,26 +12,24 @@
     &-item {
       display: inline-block;
       margin: 10px 5px;
+      border: solid 1px $color-gray-border;
+      border-radius: 3px;
+      margin-right: 0.5em;
 
       &-link {
         display: inline-block;
         height: $button-height;
-        padding: 0 24px;
+        // padding: 0 24px;
         line-height: $button-height;
-        border: 1px solid $color-gray-border;
         text-decoration: none;
         border-radius: $button-border-radius;
-        color: $color-base;
+        color: $color-primary;
 
         &:hover,
         &:focus {
-          color: $color-primary;
+          color: $color-secondary;
         }
-
       }
-
     }
-
   }
-
 }
