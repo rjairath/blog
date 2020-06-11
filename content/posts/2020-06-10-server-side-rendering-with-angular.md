@@ -2,7 +2,7 @@
 template: post
 title: Server Side Rendering with Angular Universal
 slug: server-side-rendering-angular
-draft: true
+draft: false
 date: 2020-06-10T14:28:56.847Z
 description: Making a simple server side rendered app using Angular Universal
 category: Technology
