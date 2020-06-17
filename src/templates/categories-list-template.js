@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "gatsby";
 import kebabCase from "lodash/kebabCase";
-import Sidebar from "../components/Sidebar";
+import { Sidebar, SidebarMobile } from "../components/Sidebar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Layout from "../components/Layout";
@@ -28,6 +28,7 @@ const CategoriesListTemplate = () => {
           ))}
         </ul>
       </Page>
+      <SidebarMobile />
       <Footer />
     </Layout>
   );
