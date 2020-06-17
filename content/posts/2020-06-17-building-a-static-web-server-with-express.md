@@ -123,4 +123,6 @@ app.listen(PORT, () => {
 });
 ```
 
-And that’s it! Run the code with node index-express and open the browser on localhost:4000 Here we don’t need to explicitly handle the content type or read files. Express handles all that stuff for us. Express is great !
+And that’s it! Run the code with node index-express and open the browser on localhost:4000 
+
+Unlike plain NodeJS, here we don’t need to explicitly handle the content type or read files. Express handles all that stuff for us.
