@@ -10,7 +10,7 @@ import styles from "./Post.module.scss";
 import type { Node } from "../../types";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
-import Sidebar from "../Sidebar/Sidebar";
+import { Sidebar } from "../Sidebar/Sidebar";
 
 type Props = {
   post: Node,
