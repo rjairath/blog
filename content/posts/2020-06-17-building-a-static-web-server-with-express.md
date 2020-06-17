@@ -18,6 +18,8 @@ A static web server is not meant to serve dynamically generated content which do
 
 Alright, let’s jump onto the code now
 
+PS: The repo for this demo - https://github.com/rjairath/express-static-server
+
 **The NodeJS way**
 
 The directory structure looks like the following:
@@ -39,8 +41,7 @@ const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => console.log(`listening on port ${PORT}`));
 ```
 
-This has created a basic http server. Go to localhost:5000 to test it out Now create the static files in the public folder and modify the server in index.js
-We will first modify the function to extract the file path and extension from the request url:
+This has created a basic http server. Go to localhost:5000 to test it out Now create the static files in the public folder and modify the server in index.js We will first modify the function to extract the file path and extension from the request url:
 
 ```
 const server = http.createServer((req, res) => {
@@ -93,12 +94,9 @@ fs.readFile(filePath, (err, content) => {
      res.end(content, "utf8");
    }
  });
-
 ```
 
 Done. Now run the code with `node index`, and open the browser on localhost: 5000
-
-
 
 **The Express way**
 
@@ -123,7 +121,6 @@ const PORT = process.env.PORT || 4000;
 app.listen(PORT, () => {
  console.log(`listening on port ${PORT}`);
 });
-
 ```
 
 And that’s it! Run the code with node index-express and open the browser on localhost:4000 Here we don’t need to explicitly handle the content type or read files. Express handles all that stuff for us. Express is great !
