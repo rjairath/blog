@@ -13,24 +13,47 @@ const TagsListTemplate = () => {
   const { title, subtitle } = useSiteMetadata();
   const tags = useTagsList();
 
-  return (
-    <Layout title={`Tags - ${title}`} description={subtitle}>
-      <Header />
-      <Sidebar />
-      <Page title="Tags">
-        <ul>
-          {tags.map((tag) => (
-            <li key={tag.fieldValue}>
-              <Link to={`/tag/${kebabCase(tag.fieldValue)}/`}>
-                {tag.fieldValue} ({tag.totalCount})
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </Page>
-      <Footer />
-    </Layout>
-  );
+  let width = window.innerWidth;
+
+  if (width > 685) {
+    return (
+      <Layout title={`Tags - ${title}`} description={subtitle}>
+        <Header />
+        <Sidebar />
+        <Page title="Tags">
+          <ul>
+            {tags.map((tag) => (
+              <li key={tag.fieldValue}>
+                <Link to={`/tag/${kebabCase(tag.fieldValue)}/`}>
+                  {tag.fieldValue} ({tag.totalCount})
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Page>
+        <Footer />
+      </Layout>
+    );
+  } else {
+    return (
+      <Layout title={`Tags - ${title}`} description={subtitle}>
+        <Header />
+        <Page title="Tags">
+          <ul>
+            {tags.map((tag) => (
+              <li key={tag.fieldValue}>
+                <Link to={`/tag/${kebabCase(tag.fieldValue)}/`}>
+                  {tag.fieldValue} ({tag.totalCount})
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </Page>
+        <Sidebar />
+        <Footer />
+      </Layout>
+    );
+  }
 };
 
 export default TagsListTemplate;

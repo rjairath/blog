@@ -34,22 +34,43 @@ const TagTemplate = ({ data, pageContext }: Props) => {
       ? `All Posts tagged as "${tag}" - Page ${currentPage} - ${siteTitle}`
       : `All Posts tagged as "${tag}" - ${siteTitle}`;
 
-  return (
-    <Layout title={pageTitle} description={siteSubtitle}>
-      <Header />
-      <Sidebar />
-      <Page title={tag}>
-        <Feed edges={edges} />
-        <Pagination
-          prevPagePath={prevPagePath}
-          nextPagePath={nextPagePath}
-          hasPrevPage={hasPrevPage}
-          hasNextPage={hasNextPage}
-        />
-      </Page>
-      <Footer />
-    </Layout>
-  );
+  let width = window.innerWidth;
+
+  if (width > 685) {
+    return (
+      <Layout title={pageTitle} description={siteSubtitle}>
+        <Header />
+        <Sidebar />
+        <Page title={tag}>
+          <Feed edges={edges} />
+          <Pagination
+            prevPagePath={prevPagePath}
+            nextPagePath={nextPagePath}
+            hasPrevPage={hasPrevPage}
+            hasNextPage={hasNextPage}
+          />
+        </Page>
+        <Footer />
+      </Layout>
+    );
+  } else {
+    return (
+      <Layout title={pageTitle} description={siteSubtitle}>
+        <Header />
+        <Page title={tag}>
+          <Feed edges={edges} />
+          <Pagination
+            prevPagePath={prevPagePath}
+            nextPagePath={nextPagePath}
+            hasPrevPage={hasPrevPage}
+            hasNextPage={hasNextPage}
+          />
+        </Page>
+        <Sidebar />
+        <Footer />
+      </Layout>
+    );
+  }
 };
 
 export const query = graphql`

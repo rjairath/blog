@@ -31,22 +31,43 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
   const pageTitle =
     currentPage > 0 ? `Posts - Page ${currentPage} - ${siteTitle}` : siteTitle;
 
-  return (
-    <Layout title={pageTitle} description={siteSubtitle}>
-      <Header />
-      <Sidebar isIndex />
-      <Page>
-        <Feed edges={edges} />
-        <Pagination
-          prevPagePath={prevPagePath}
-          nextPagePath={nextPagePath}
-          hasPrevPage={hasPrevPage}
-          hasNextPage={hasNextPage}
-        />
-      </Page>
-      <Footer />
-    </Layout>
-  );
+  let width = window.innerWidth;
+
+  if (width > 685) {
+    return (
+      <Layout title={pageTitle} description={siteSubtitle}>
+        <Header />
+        <Sidebar isIndex />
+        <Page>
+          <Feed edges={edges} />
+          <Pagination
+            prevPagePath={prevPagePath}
+            nextPagePath={nextPagePath}
+            hasPrevPage={hasPrevPage}
+            hasNextPage={hasNextPage}
+          />
+        </Page>
+        <Footer />
+      </Layout>
+    );
+  } else {
+    return (
+      <Layout title={pageTitle} description={siteSubtitle}>
+        <Header />
+        <Page>
+          <Feed edges={edges} />
+          <Pagination
+            prevPagePath={prevPagePath}
+            nextPagePath={nextPagePath}
+            hasPrevPage={hasPrevPage}
+            hasNextPage={hasNextPage}
+          />
+        </Page>
+        <Sidebar isIndex />
+        <Footer />
+      </Layout>
+    );
+  }
 };
 
 export const query = graphql`
