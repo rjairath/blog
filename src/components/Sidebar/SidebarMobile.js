@@ -13,12 +13,12 @@ type Props = {
   isIndex?: boolean,
 };
 
-const Sidebar = ({ isIndex }: Props) => {
+const SidebarMobile = ({ isIndex }: Props) => {
   const { author, copyright, menu } = useSiteMetadata();
   const tags = useTagsList();
 
   return (
-    <div className={styles["sidebar"]}>
+    <div className={styles["sidebarMobile"]}>
       <div className={styles["sidebar__inner"]}>
         <Author author={author} isIndex={isIndex} />
         <TagsList tags={tags} />
@@ -29,4 +29,4 @@ const Sidebar = ({ isIndex }: Props) => {
   );
 };
 
-export { Sidebar };
+export { SidebarMobile };

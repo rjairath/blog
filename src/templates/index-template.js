@@ -3,7 +3,7 @@ import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
 import Header from "../components/Header";
-import Sidebar from "../components/Sidebar";
+import { Sidebar, SidebarMobile } from "../components/Sidebar";
 import Footer from "../components/Footer";
 import Feed from "../components/Feed";
 import Page from "../components/Page";
@@ -44,6 +44,7 @@ const IndexTemplate = ({ data, pageContext }: Props) => {
           hasNextPage={hasNextPage}
         />
       </Page>
+      <SidebarMobile />
       <Footer />
     </Layout>
   );

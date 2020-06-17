@@ -2,7 +2,7 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/Layout";
-import Sidebar from "../components/Sidebar";
+import { Sidebar, SidebarMobile } from "../components/Sidebar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Feed from "../components/Feed";
@@ -47,6 +47,7 @@ const CategoryTemplate = ({ data, pageContext }: Props) => {
           hasNextPage={hasNextPage}
         />
       </Page>
+      <SidebarMobile />
       <Footer />
     </Layout>
   );

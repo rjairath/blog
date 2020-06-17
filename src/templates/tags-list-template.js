@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "gatsby";
 import kebabCase from "lodash/kebabCase";
 import Layout from "../components/Layout";
-import Sidebar from "../components/Sidebar";
+import { Sidebar, SidebarMobile } from "../components/Sidebar";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Page from "../components/Page";
@@ -28,6 +28,7 @@ const TagsListTemplate = () => {
           ))}
         </ul>
       </Page>
+      <SidebarMobile />
       <Footer />
     </Layout>
   );

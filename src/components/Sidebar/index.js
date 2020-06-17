@@ -1,2 +1,3 @@
 // @flow strict
-export { default } from './Sidebar';
+export { Sidebar } from "./Sidebar";
+export { SidebarMobile } from "./SidebarMobile";
