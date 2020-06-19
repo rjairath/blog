@@ -11,7 +11,7 @@ const Header = () => {
         <Link to="/">Blog Home</Link>
       </span>
       <span className={styles["header__right"]}>
-        <a href="https://rishabhjairath.netlify.app/">About me</a>
+        <a href="https://rishabhjairath.in/">About me</a>
       </span>
     </div>
   );
