@@ -1,7 +1,7 @@
 ---
 template: post
 title: Implementing the async waterfall in Javascript
-slug: /async-waterfall-js
+slug: async-waterfall-js
 draft: false
 date: 2020-06-21T15:10:44.525Z
 description: The waterfall function takes an array of asynchronous functions and
