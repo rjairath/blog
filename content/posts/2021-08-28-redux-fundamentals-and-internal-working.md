@@ -7,7 +7,7 @@ date: 2021-08-28T12:07:41.204Z
 description: Redux is a standalone JS library used for managing application wide
   state through events called actions. We will use it in a vanilla JS project to
   understand what goes on under the hood
-category: javascript
+category: Technology
 tags:
   - Redux
   - Javascript
